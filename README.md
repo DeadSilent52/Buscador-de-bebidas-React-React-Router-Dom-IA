@@ -1,69 +1,28 @@
-# React + TypeScript + Vite
+# Aplicación de bebidas React + React Router DOM + IA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img width="1898" height="857" alt="image" src="https://github.com/user-attachments/assets/87648906-2d77-4508-b678-081925a6622d" />
+<img width="1901" height="868" alt="image" src="https://github.com/user-attachments/assets/640a1659-9972-45f9-ba95-91809b9ccce6" />
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Este proyecto es una aplicación interactiva que permite consultar bebidas alcoholicas a una api, la cual esta desarrollada con React y TypeScript utilizando React Router DOM para la navegación entre paginas. Se utilizo una api de IA para generar bebidas en base a una instruccion(prompt) y el diseño fue creado con el framework TailwindCSS.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Funcionalidades
+- **Buscar Recetas:** Permite realizar una consulta de recetas en base al nombre/ingrediente y categoría seleccionada.
+- **Ver Receta:** Permite ver información de la receta.
+- **Agregar a Favoritos:** Añade la receta a una lista de bebidas favoritas.
+- **Favoritos:** Permite visualizar en otra pestaña todas las recetas favoritas seleccionadas, así mismo en esta pestaña se las puede eliminar de favoritos.
+- **Generar con IA:** Es una IA que devuelve recetas de bebidas alcoholicas en base a la intrucción que se le da.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Tecnologías Utilizadas
+-React
+-TypeScript
+-Vite
+-Tailwind
+-React Router DOM
+-API
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Despliegue
+https://buscador-bebidas-react-ia-api.netlify.app/
